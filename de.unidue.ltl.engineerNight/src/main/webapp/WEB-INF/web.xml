@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	
+	<servlet>
+		<servlet-name>AlexaServlet_Intro</servlet-name>
+		<servlet-class>com.amazon.customskill.AlexaServlet_Intro</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AlexaServlet_Parrot</servlet-name>
+		<servlet-class>com.amazon.customskill.AlexaServlet_Parrot</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AlexaServlet_Conclusion</servlet-name>
+		<servlet-class>com.amazon.customskill.AlexaServlet_Conclusion</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AlexaServlet_Intro</servlet-name>
+		<url-pattern>/introRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AlexaServlet_Parrot</servlet-name>
+		<url-pattern>/parrotRequest</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>AlexaServlet_Conclusion</servlet-name>
+		<url-pattern>/conclusionRequest</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>nlp.dkpro.backend.BackendStarter</listener-class>
+	</listener>
+	
+</web-app>
